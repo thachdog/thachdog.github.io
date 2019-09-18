@@ -10,28 +10,28 @@
     h1 {
         font-family: 'Staatliches';
         color: #20639b;
-        font-size:50;
+        font-size:4vw;
         line-height: 0%;
     }
 
     h2 {
         font-family: 'Staatliches';
         color: #ffb347;
-        font-size: 40;
+        font-size: 2vw;
         line-height: 0%;
     }
 
     h3{
         font-family: 'Staatliches';
         color: #20639b;
-        font-size:20;
+        font-size:1.5vw;
         line-height: 0%;
     }
 
     h4{
         font-family: 'Staatliches';
         color: #ffb347;
-        font-size:20;
+        font-size:1.5vw;
         line-height: 0%;
     }
     .lowhigh {
@@ -44,7 +44,7 @@
         cursor: pointer;
         font-family: 'Staatliches';
         color: #9b202a;
-        font-size: 15;
+        font-size: .75vw;
     }
     .corr {
         background:none;
@@ -56,7 +56,7 @@
         cursor: pointer;
         font-family: 'Staatliches';
         color: #36a758;
-        font-size: 15;
+        font-size: .75vw;
     }
     .control {
         background:none;
@@ -68,7 +68,7 @@
         cursor: pointer;
         font-family: 'Staatliches';
         color: #20639b;
-        font-size: 15;
+        font-size: .75vw;
     }
     </style>
     <title>Guess Number</title>
@@ -84,7 +84,6 @@
             guess = (lb + ub) / 2;
             guess = parseFloat(guess.toFixed(0));
             document.getElementById("guess").innerHTML = "  I Guess " + guess;
-
         }
         function high () {
             ub = guess * 1;
@@ -116,6 +115,7 @@
         }
         function moretry () {
             document.getElementById("gloat").innerHTML = "I guessed in   " + count + "   tries ";
+      
         }
         function reveal () {
             document.getElementsByClassName('lowhigh')[0].style.visibility = 'visible';
@@ -124,7 +124,6 @@
         }
         function start () {
             document.getElementById("guess").innerHTML = "I Guess 50";
-
         }
         
            
@@ -139,7 +138,7 @@
     <br style="line-height: 0%;"></br>
         <h1>I Can Guess Your Number</h1>
         <h4>Think of a number between 1 and 100</h4>    
-            <button class="control" onClick="reveal();setTimeout(start,1000);">Start </button> &emsp;
+            <button class="control" onClick="reveal();setTimeout(start,200);">Start </button> &emsp;
             <button class="control" onClick="window.location.reload();"> Reset </button> <br></br><br></br>
         </div>
             <div id="controller" style="visibility:hidden">
