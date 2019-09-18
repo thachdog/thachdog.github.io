@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<!--Standard Google fonts import-->
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+    <style>
+    h1 {
+        font-family: 'Staatliches';
+        color: #20639b;
+    }
+
+    h2 {
+        font-family: 'Staatliches';
+        color: #9b202a;
+        font-size: 20;
+    }
+    </style>
+    <title>Guess Number</title>
+    <script>
+        var secret = Math.round(Math.random() * 100);
+        var count = 0;
+        var guess;
+        function magic(guess) {
+            count ++;
+            if (guess > 100) {
+                console.log("Input a number between 1 and 100")
+            }
+            else if (guess == secret){
+                console.log("Correct! Number is",secret,"You guessed in ",count,"turn(s).");  
+            }
+            else if (guess > secret) {
+                console.log("Too High");
+            }
+            else if (guess < secret) {
+                console.log("Too Low")
+            }
+           
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Guess a Number Between 0 and 100...</h1>
+    <input id="inpot" type="number" min="1" max="100" autofocus>
+    <button onclick="magic(inpot.value)">Guess</button>
+    <button onClick="window.location.reload();">Reset</button>
+</body>
+
+</html>
